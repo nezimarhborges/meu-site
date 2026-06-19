@@ -1,0 +1,242 @@
+<!doctype html>
+<!--
+	Adapted for Nezimar H. Borges - Poesia Dramática
+	Original design by FreeHTML5.co
+	License: Creative Commons Attribution 3.0 Unported
+-->
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Blog do escritor Nezimar H. Borges - Poesia Dramática">
+	<meta name="author" content="Nezimar H. Borges">
+	
+	<link rel="icon" type="image/png" href="./images/favicon-pomba-branca.png">
+	<link rel="apple-touch-icon" href="./images/favicon-pomba-branca.png">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
+	
+	<style>
+		.blog-page {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 40px 20px 60px;
+		}
+		.blog-page h1 {
+			font-size: 36px;
+			color: #333;
+			margin-bottom: 10px;
+		}
+		.blog-page .subtitle {
+			color: #666;
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+		.blog-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			gap: 30px;
+		}
+		.blog-card {
+			background: #fff;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+			transition: all 0.3s ease;
+		}
+		.blog-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+		}
+		.blog-card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		.blog-card .card-content {
+			padding: 20px;
+		}
+		.blog-card .card-content .category {
+			color: #bf5252;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 600;
+		}
+		.blog-card .card-content h3 {
+			font-size: 18px;
+			color: #333;
+			margin: 8px 0 10px;
+		}
+		.blog-card .card-content h3 a {
+			color: #333;
+			text-decoration: none;
+		}
+		.blog-card .card-content h3 a:hover {
+			color: #bf5252;
+		}
+		.blog-card .card-content .date {
+			color: #999;
+			font-size: 13px;
+			margin-bottom: 10px;
+		}
+		.blog-card .card-content p {
+			color: #666;
+			font-size: 14px;
+			line-height: 1.6;
+		}
+		.blog-card .card-content .read-more {
+			display: inline-block;
+			margin-top: 12px;
+			color: #bf5252;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+		}
+		.blog-card .card-content .read-more:hover {
+			color: #d43f3f;
+		}
+		.no-posts {
+			text-align: center;
+			padding: 60px 20px;
+			color: #999;
+		}
+		@media (max-width: 768px) {
+			.blog-grid {
+				grid-template-columns: 1fr;
+			}
+			.blog-page h1 {
+				font-size: 28px;
+			}
+		}
+	</style>
+	
+	<title>Blog - Nezimar H. Borges</title>
+</head>
+<body>
+
+	<!-- ===== NAVBAR PROFISSIONAL ===== -->
+	<nav class="navbar-pro">
+		<div class="navbar-pro-inner">
+			<div class="logo">
+				<a href="index.html">
+					<img src="./images/site-logo.png" alt="Nezimar H. Borges">
+					<span>Nezimar H. Borges</span>
+				</a>
+			</div>
+			<ul class="nav-menu" id="navMenu">
+				<li><a href="index.html">Início</a></li>
+				<li><a href="biografia.html">Biografia</a></li>
+				<li class="dropdown">
+					<a href="#" onclick="toggleDropdown(event)">Livros ▾</a>
+					<ul class="dropdown-menu">
+						<li><a href="livro-casal-malandro.html">O Casal Malandro</a></li>
+						<li><a href="livro-renata-maria.html">Renata Maria</a></li>
+						<li><a href="livro-nega-enzo.html">Nega & Enzo</a></li>
+						<li><a href="livro-suzane.html">Suzane Von Richthofen</a></li>
+						<li><a href="livro-elize.html">Elize Matsunaga</a></li>
+						<li><a href="livro-flordelis.html">Flordelis</a></li>
+					</ul>
+				</li>
+				<li><a href="blog.html" class="active">Blog</a></li>
+				<li><a href="trilogia.html">Trilogia</a></li>
+				<li><a href="index.html#contato">Contato</a></li>
+			</ul>
+			<div class="hamburger" id="hamburger" onclick="toggleMenu()">
+				<span></span><span></span><span></span>
+			</div>
+		</div>
+	</nav>
+	
+	<script>
+		function toggleMenu() {
+			document.getElementById('navMenu').classList.toggle('open');
+			document.getElementById('hamburger').classList.toggle('active');
+		}
+		function toggleDropdown(e) {
+			if (window.innerWidth <= 992) {
+				e.preventDefault();
+				e.target.closest('.dropdown').classList.toggle('open');
+			}
+		}
+		document.querySelectorAll('.nav-menu a').forEach(link => {
+			link.addEventListener('click', function() {
+				if (window.innerWidth <= 992) {
+					document.getElementById('navMenu').classList.remove('open');
+					document.getElementById('hamburger').classList.remove('active');
+				}
+			});
+		});
+		window.addEventListener('resize', function() {
+			if (window.innerWidth > 992) {
+				document.querySelectorAll('.dropdown.open').forEach(el => el.classList.remove('open'));
+			}
+		});
+	</script>
+
+	<!-- Blog -->
+	<section class="blog-page">
+		<h1>Blog</h1>
+		<p class="subtitle">Reflexões, bastidores da escrita e discussões sobre poesia dramática</p>
+		
+		<div id="blogPosts" class="blog-grid">
+			<!-- Os posts serão carregados via JavaScript -->
+			<div class="no-posts">Carregando posts...</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="site-footer" id="contato" style="margin-top:40px;">
+		<div class="site-container">
+			<div class="footer-inner">
+				<div class="footer-info">
+					<div class="footer-info__left">
+						<img src="./images/footer-img.jpg" alt="Nezimar H. Borges">
+						<p>Conheça mais sobre o escritor</p>
+					</div>
+					<div class="footer-info__right">
+						<h5>Contato</h5>
+						<p>Email: <a href="mailto:contato@nezimarhborges.com" style="color: #fff; text-decoration: none;">contato@nezimarhborges.com</a></p>
+						<div class="social-icons">
+							<a href="https://instagram.com/nezimarhborges" target="_blank"><img src="./images/social-instagran.png" alt="Instagram"></a>
+							<a href="https://tiktok.com/@nezimarborges" target="_blank"><img src="./images/social-tiktok.png" alt="TikTok"></a>
+							<a href="https://www.facebook.com/nezimarhborges" target="_blank"><img src="./images/social-facebook.png" alt="Facebook"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-contact-form">
+					<h5>Formulário de Contato</h5>
+					<!-- Formulário de Contato com Formspree -->
+<form class="contact-form" action="https://formspree.io/f/xzdqlvyj" method="POST">
+    <div class="contact-form__input">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+    </div>
+    <textarea name="message" placeholder="Sua mensagem..." required></textarea>
+    <input type="submit" name="submit" value="Enviar" class="submit-button">
+</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="site-container footer-bottom-inner">
+				<p>© 2026 Nezimar H. Borges | Design por <a href="https://freehtml5.co/" target="_blank">freehtml5.co</a> | Todos os direitos reservados.</p>
+				<div class="footer-bottom__img">
+					<img src="./images/footer-mastercard.png" alt="pagamento">
+					<img src="./images/footer-paypal.png" alt="pagamento">
+					<img src="./images/footer-visa.png" alt="pagamento">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+    <script src="js/github-blog.js"></script>
+
+
+</body>
+</html>
+

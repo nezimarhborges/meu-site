@@ -1,0 +1,348 @@
+<!doctype html>
+<!--
+	Adapted for Nezimar H. Borges - Poesia Dramática
+	Original design by FreeHTML5.co
+	License: Creative Commons Attribution 3.0 Unported
+-->
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Nega & Enzo - Livro de Nezimar H. Borges. Uma tragédia em versos sobre amor proibido e racismo.">
+	<meta name="author" content="Nezimar H. Borges">
+	
+	<link rel="icon" type="image/png" href="./images/favicon-pomba-branca.png">
+	<link rel="apple-touch-icon" href="./images/favicon-pomba-branca.png">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
+	
+	<style>
+		/* Mesmo estilo das páginas anteriores */
+		.book-page {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 40px 20px 60px;
+		}
+		.book-page .book-header {
+			display: flex;
+			gap: 40px;
+			align-items: flex-start;
+			margin-bottom: 40px;
+		}
+		.book-page .book-cover {
+			flex: 0 0 300px;
+		}
+		.book-page .book-cover img {
+			width: 100%;
+			border-radius: 8px;
+			box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+		}
+		.book-page .book-info {
+			flex: 1;
+		}
+		.book-page .book-info h1 {
+			font-size: 32px;
+			color: #333;
+			margin-bottom: 5px;
+		}
+		.book-page .book-info .book-subtitle {
+			color: #bf5252;
+			font-size: 18px;
+			margin-bottom: 15px;
+		}
+		.book-page .book-info .book-meta {
+			color: #666;
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
+		.book-page .book-info .book-meta span {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		.book-page .book-info .btn-comprar {
+			background: #bf5252;
+			color: #fff;
+			padding: 12px 30px;
+			border-radius: 6px;
+			text-decoration: none;
+			font-weight: 600;
+			display: inline-block;
+			transition: all 0.3s;
+			border: none;
+			cursor: pointer;
+		}
+		.book-page .book-info .btn-comprar:hover {
+			background: #d43f3f;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 15px rgba(191,82,82,0.4);
+		}
+		.book-page h2 {
+			font-size: 24px;
+			color: #333;
+			margin-top: 40px;
+			margin-bottom: 15px;
+			border-bottom: 2px solid #bf5252;
+			padding-bottom: 8px;
+		}
+		.book-page .sinopse {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #555;
+		}
+		.book-page .sinopse p {
+			margin-bottom: 15px;
+		}
+		.book-page .sinopse .destaque {
+			color: #bf5252;
+			font-weight: 600;
+		}
+		.book-page .verso-destaque {
+			background: #f9f9f9;
+			padding: 20px 30px;
+			border-left: 4px solid #bf5252;
+			margin: 20px 0;
+			font-style: italic;
+			color: #333;
+			border-radius: 0 6px 6px 0;
+		}
+		.book-page .verso-destaque .autor-verso {
+			display: block;
+			margin-top: 8px;
+			font-style: normal;
+			color: #bf5252;
+			font-weight: 600;
+		}
+		.book-page .detalhes {
+			background: #f9f9f9;
+			padding: 20px 30px;
+			border-radius: 8px;
+			margin-top: 20px;
+		}
+		.book-page .detalhes ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.book-page .detalhes ul li {
+			padding: 8px 0;
+			border-bottom: 1px solid #eee;
+		}
+		.book-page .detalhes ul li:last-child {
+			border-bottom: none;
+		}
+		.book-page .detalhes ul li strong {
+			color: #333;
+			width: 120px;
+			display: inline-block;
+		}
+		@media (max-width: 768px) {
+			.book-page .book-header {
+				flex-direction: column;
+				align-items: center;
+			}
+			.book-page .book-cover {
+				flex: 0 0 auto;
+				max-width: 250px;
+			}
+			.book-page .book-info h1 {
+				font-size: 26px;
+				text-align: center;
+			}
+			.book-page .book-info .book-subtitle {
+				text-align: center;
+			}
+			.book-page .book-info .btn-comprar {
+				display: block;
+				text-align: center;
+			}
+		}
+	</style>
+	
+	<title>Nega & Enzo - Nezimar H. Borges</title>
+</head>
+<body>
+
+	<!-- ===== NAVBAR PROFISSIONAL ===== -->
+	<nav class="navbar-pro">
+		<div class="navbar-pro-inner">
+			<div class="logo">
+				<a href="index.html">
+					<img src="./images/site-logo.png" alt="Nezimar H. Borges">
+					<span>Nezimar H. Borges</span>
+				</a>
+			</div>
+			<ul class="nav-menu" id="navMenu">
+				<li><a href="index.html">Início</a></li>
+				<li><a href="biografia.html">Biografia</a></li>
+				<li class="dropdown">
+					<a href="#" onclick="toggleDropdown(event)">Livros ▾</a>
+					<ul class="dropdown-menu">
+						<li><a href="livro-casal-malandro.html">O Casal Malandro</a></li>
+						<li><a href="livro-renata-maria.html">Renata Maria</a></li>
+						<li><a href="livro-nega-enzo.html" class="active">Nega & Enzo</a></li>
+						<li><a href="livro-suzane.html">Suzane Von Richthofen</a></li>
+						<li><a href="livro-elize.html">Elize Matsunaga</a></li>
+						<li><a href="livro-flordelis.html">Flordelis</a></li>
+					</ul>
+				</li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="trilogia.html">Trilogia</a></li>
+				<li><a href="index.html#contato">Contato</a></li>
+			</ul>
+			<div class="hamburger" id="hamburger" onclick="toggleMenu()">
+				<span></span><span></span><span></span>
+			</div>
+		</div>
+	</nav>
+	
+	<script>
+		function toggleMenu() {
+			document.getElementById('navMenu').classList.toggle('open');
+			document.getElementById('hamburger').classList.toggle('active');
+		}
+		function toggleDropdown(e) {
+			if (window.innerWidth <= 992) {
+				e.preventDefault();
+				e.target.closest('.dropdown').classList.toggle('open');
+			}
+		}
+		document.querySelectorAll('.nav-menu a').forEach(link => {
+			link.addEventListener('click', function() {
+				if (window.innerWidth <= 992) {
+					document.getElementById('navMenu').classList.remove('open');
+					document.getElementById('hamburger').classList.remove('active');
+				}
+			});
+		});
+		window.addEventListener('resize', function() {
+			if (window.innerWidth > 992) {
+				document.querySelectorAll('.dropdown.open').forEach(el => el.classList.remove('open'));
+			}
+		});
+	</script>
+
+	<!-- Página do Livro -->
+	<section class="book-page">
+		<div class="book-header">
+			<div class="book-cover">
+				<img src="./images/books-3.jpg" alt="Capa do livro Nega & Enzo">
+			</div>
+			<div class="book-info">
+				<h1>Nega & Enzo</h1>
+				<p class="book-subtitle">O amor proibido</p>
+				<div class="book-meta">
+					<span>📅 2024</span>
+					<span>📖 Tragédia em Versos</span>
+					<span>🏷️ Racismo · Amor Proibido</span>
+				</div>
+				<a href="https://loja.uiclap.com/pesquisa=Nezimar%20H.%20Borges" target="_blank" class="btn-comprar">Comprar na UICLAP →</a>
+			</div>
+		</div>
+		
+		<h2>Sinopse</h2>
+		<div class="sinopse">
+			<p><span class="destaque">"Quando o amor nasce onde o mundo insiste em plantar ódio, a tragédia é apenas uma questão de tempo."</span></p>
+			<p>Em <strong>Nega & Enzo – o amor proibido</strong>, Nezimar H. Borges constrói uma tragédia contemporânea sobre o racismo cordial que ainda atravessa lares, políticas e corações. Enzo, filho único da elite branca de Novo Hamburgo, carrega o apelido de "Último Romântico". Mana Nega, vocalista de uma banda local, tem na voz sua arma e na pele sua sentença.</p>
+			<p>Entre shows de rock, juras de amor e o sonho ingênuo de uma família, os dois adolescentes descobrem que, para alguns, amar é um ato de rebeldia. A família de Enzo, liderada por um pai candidato a prefeito, não perdoa a ousadia. O que se segue é uma espiral de violência: sequestro, aborto forçado, traição e uma sucessão de mortes que lembram o melhor do drama elisabetano.</p>
+			<p><span class="destaque">"Sem ela, aqui, não sou capaz / Fazer nada, nem durmo mais!"</span></p>
+			<p>Com ecos de Shakespeare e a crueza do nosso tempo, <strong>Nega & Enzo não é apenas uma história de amor proibido. É o retrato de uma sociedade que aplaude a mistura na música, mas a condena na mesa de jantar.</strong></p>
+		</div>
+<!-- ===== PLAYER DA TRILHA SONORA ===== -->
+<div class="player-container">
+    <h3 class="player-title">🎵 Trilha Sonora do Livro</h3>
+    <audio controls class="audio-player">
+        <source src="./audio/musica-nega-enzo.mp3" type="audio/mpeg">
+        Seu navegador não suporta o player de áudio.
+    </audio>
+    <p class="player-credits">Música sugerida pelo autor</p>
+</div>
+		<h2>Versos do livro</h2>
+		<div class="verso-destaque">
+			"Eu admiro o nosso Senhor<br>
+			Por ter desenhado o amor<br>
+			Em corpo aqui meu louvor:<br>
+			O belo da Nega maior."<br>
+			<span class="autor-verso">— Enzo</span>
+		</div>
+		<div class="verso-destaque">
+			"Teus pés singelos são tão lindos;<br>
+			Na sandália são bem-vindos<br>
+			A meus olhos e divertindo<br>
+			Coração que ama sorrindo."<br>
+			<span class="autor-verso">— Enzo</span>
+		</div>
+
+		<h2>O que a crítica diz</h2>
+		<div class="sinopse">
+			<p><em>"Nega & Enzo é um livro para quem não tem medo de sofrer. É para quem acredita que a literatura ainda pode mudar olhares. Racismo, amor, política, família — tudo em versos que cortam como faca."</em></p>
+		</div>
+		
+		<h2>Detalhes do Livro</h2>
+		<div class="detalhes">
+			<ul>
+				<li><strong>Título:</strong> Nega & Enzo</li>
+				<li><strong>Subtítulo:</strong> O amor proibido</li>
+				<li><strong>Autor:</strong> Nezimar H. Borges</li>
+				<li><strong>Gênero:</strong> Tragédia / Poesia Dramática</li>
+				<li><strong>Ano:</strong> 2024</li>
+				<li><strong>Estrutura:</strong> 5 Atos + Prólogo + Epílogo + Coro</li>
+				<li><strong>Inspiração:</strong> História real ouvida em Novo Hamburgo - RS</li>
+			</ul>
+		</div>
+
+		<div style="margin-top: 30px; padding: 15px 20px; background: #f0f0f0; border-radius: 6px; font-size: 14px; color: #666;">
+			⚠️ <strong>Aviso:</strong> Esta obra contém cenas de violência racial, aborto e temas sensíveis. Recomendada para maiores de 18 anos.
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="site-footer" id="contato" style="margin-top:40px;">
+		<div class="site-container">
+			<div class="footer-inner">
+				<div class="footer-info">
+					<div class="footer-info__left">
+						<img src="./images/footer-img.jpg" alt="Nezimar H. Borges">
+						<p>Conheça mais sobre o escritor</p>
+					</div>
+					<div class="footer-info__right">
+						<h5>Contato</h5>
+						<p>Email: <a href="mailto:contato@nezimarhborges.com" style="color: #fff; text-decoration: none;">contato@nezimarhborges.com</a></p>
+						<div class="social-icons">
+							<a href="https://instagram.com/nezimarhborges" target="_blank"><img src="./images/social-instagran.png" alt="Instagram"></a>
+							<a href="https://tiktok.com/@nezimarborges" target="_blank"><img src="./images/social-tiktok.png" alt="TikTok"></a>
+							<a href="https://www.facebook.com/nezimarhborges" target="_blank"><img src="./images/social-facebook.png" alt="Facebook"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-contact-form">
+					<h5>Formulário de Contato</h5>
+					<!-- Formulário de Contato com Formspree -->
+<form class="contact-form" action="https://formspree.io/f/xzdqlvyj" method="POST">
+    <div class="contact-form__input">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+    </div>
+    <textarea name="message" placeholder="Sua mensagem..." required></textarea>
+    <input type="submit" name="submit" value="Enviar" class="submit-button">
+</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="site-container footer-bottom-inner">
+				<p>© 2026 Nezimar H. Borges | Design por <a href="https://freehtml5.co/" target="_blank">freehtml5.co</a> | Todos os direitos reservados.</p>
+				<div class="footer-bottom__img">
+					<img src="./images/footer-mastercard.png" alt="pagamento">
+					<img src="./images/footer-paypal.png" alt="pagamento">
+					<img src="./images/footer-visa.png" alt="pagamento">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

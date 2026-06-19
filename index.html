@@ -1,0 +1,432 @@
+<!doctype html>
+<!--
+	Adapted for Nezimar H. Borges - Poesia Dramática
+	Original design by FreeHTML5.co
+	License: Creative Commons Attribution 3.0 Unported
+-->
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Site oficial do escritor Nezimar H. Borges - Poesia Dramática. Conheça suas obras: O Casal Malandro, Renata Maria, Nega & Enzo e mais.">
+	<meta name="author" content="Nezimar H. Borges">
+	
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="./images/favicon-pomba-branca.png">
+	<link rel="apple-touch-icon" href="./images/favicon-pomba-branca.png">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
+	
+	<title>Nezimar H. Borges - Escritor | Poesia Dramática</title>
+</head>
+<body>
+
+	<!-- ===== NAVBAR PROFISSIONAL ===== -->
+	<nav class="navbar-pro">
+		<div class="navbar-pro-inner">
+			<div class="logo">
+				<a href="index.html">
+					<img src="./images/site-logo.png" alt="Nezimar H. Borges">
+					<span>Nezimar H. Borges</span>
+				</a>
+			</div>
+			<ul class="nav-menu" id="navMenu">
+				<li><a href="index.html" class="active">Início</a></li>
+				<li><a href="biografia.html">Biografia</a></li>
+				<li class="dropdown">
+					<a href="#" onclick="toggleDropdown(event)">Livros ▾</a>
+					<ul class="dropdown-menu">
+						<li><a href="livro-casal-malandro.html">O Casal Malandro</a></li>
+						<li><a href="livro-renata-maria.html">Renata Maria</a></li>
+						<li><a href="livro-nega-enzo.html">Nega & Enzo</a></li>
+						<li><a href="livro-suzane.html">Suzane Von Richthofen</a></li>
+						<li><a href="livro-elize.html">Elize Matsunaga</a></li>
+						<li><a href="livro-flordelis.html">Flordelis</a></li>
+					</ul>
+				</li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="trilogia.html">Trilogia</a></li>
+				<li><a href="#contato">Contato</a></li>
+			</ul>
+			<div class="hamburger" id="hamburger" onclick="toggleMenu()">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- ===== SCRIPTS DA NAVBAR ===== -->
+	<script>
+		function toggleMenu() {
+			const menu = document.getElementById('navMenu');
+			const hamburger = document.getElementById('hamburger');
+			menu.classList.toggle('open');
+			hamburger.classList.toggle('active');
+		}
+		
+		function toggleDropdown(e) {
+			if (window.innerWidth <= 992) {
+				e.preventDefault();
+				const parent = e.target.closest('.dropdown');
+				parent.classList.toggle('open');
+			}
+		}
+		
+		// Fechar menu ao clicar em um link (mobile)
+		document.querySelectorAll('.nav-menu a').forEach(link => {
+			link.addEventListener('click', function() {
+				if (window.innerWidth <= 992) {
+					document.getElementById('navMenu').classList.remove('open');
+					document.getElementById('hamburger').classList.remove('active');
+				}
+			});
+		});
+		
+		// Fechar dropdowns ao redimensionar para desktop
+		window.addEventListener('resize', function() {
+			if (window.innerWidth > 992) {
+				document.querySelectorAll('.dropdown.open').forEach(el => {
+					el.classList.remove('open');
+				});
+			}
+		});
+	</script>
+
+	<!-- Top banner -->
+	<section class="fh5co-top-banner" style="margin-top:0;">
+		<div class="top-banner__inner site-container">
+			<div class="top-banner__image">
+				<img src="./images/top-banner-author.jpg" alt="Nezimar H. Borges">
+			</div>
+			<div class="top-banner__text">
+				<div class="top-banner__text-up">
+					<span class="brand-span">Página Oficial</span>
+					<h2 class="top-banner__h2">Nezimar</h2>
+				</div>
+				<div class="top-banner__text-down">
+					<h2 class="top-banner__h2">H. Borges</h2>
+					<span class="brand-span">Poeta Dramático | Escritor | Último Romântico</span>
+				</div>
+				<p>"Não escrevo para agradar. Escrevo porque o amor e o ódio precisam de testemunhas."</p>
+				<a href="#sobre" class="brand-button">Conheça minha trajetória > </a>
+			</div>
+		</div>
+	</section>
+	<!-- Top banner end -->
+
+	<!-- About me -->
+	<section class="fh5co-about-me" id="sobre">
+    <div class="about-me-inner site-container">
+        <article class="portfolio-wrapper">
+            <div class="portfolio__img">
+                <img src="./images/about-me.jpg" class="about-me__profile" alt="Nezimar H. Borges perfil">
+            </div>
+            <div class="portfolio__bottom">
+                <div class="portfolio__name">
+                    <span>N</span>
+                    <h2 class="universal-h2">ezimar H. Borges</h2>
+                </div>
+                <p>Colecionador de dramas humanos. Escritor de tragédias em versos. Um último romântico em busca de testemunhas para o amor e o ódio.</p>
+            </div>
+        </article>
+        <div class="about-me__text">
+            <!-- 🔹 TEXTO SOBRE A IMAGEM -->
+            <div class="about-me-presentation">
+                <h2 class="universal-h2 universal-h2-bckg">Sobre o Autor</h2>
+                <p>
+                    <span>E</span> scritor amapaense radicado no Rio de Janeiro, 
+                    colecionador de dramas humanos e autor de 6 livros publicados. 
+                    Sua escrita transita entre a tragédia clássica e a crueza contemporânea, 
+                    investigando o poder do dinheiro, do sexo e da religião. 
+                    Em <strong>Nega & Enzo</strong>, ele se permite ser um "último romântico" 
+                    e entrega sua obra mais visceral.
+                </p>
+                <p>
+                    <strong>Poeta Dramático | Escritor | Último Romântico</strong>
+                </p>
+            </div>
+            
+            <div class="about-me-slider">
+                <!-- Slider existente -->
+            </div>
+        </div>
+    </div>
+    <div class="about-me-bckg"></div>
+</section>
+	<!-- About me end -->
+
+	<!-- Books -->
+	<section class="fh5co-books" id="livros">
+		<div class="site-container">
+			<h2 class="universal-h2 universal-h2-bckg">Obras</h2>
+			<div class="books">
+				<div class="single-book">
+					<a href="livro-casal-malandro.html" class="single-book__img">
+						<img src="./images/books-1.jpg" alt="O Casal Malandro">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="Ver mais">
+						</div>
+					</a>
+					<h4 class="single-book__title">O Casal Malandro</h4>
+					<span class="single-book__price">O poder do sexo</span>
+				</div>
+				<div class="single-book">
+					<a href="livro-renata-maria.html" class="single-book__img">
+						<img src="./images/books-2.jpg" alt="Renata Maria">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="Ver mais">
+						</div>
+					</a>
+					<h4 class="single-book__title">Renata Maria</h4>
+					<span class="single-book__price">Feminicídio em carne e osso</span>
+				</div>
+				<div class="single-book">
+					<a href="livro-nega-enzo.html" class="single-book__img">
+						<img src="./images/books-3.jpg" alt="Nega & Enzo">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="Ver mais">
+						</div>
+					</a>
+					<h4 class="single-book__title">Nega & Enzo</h4>
+					<span class="single-book__price">O amor proibido</span>
+				</div>
+				<div class="single-book">
+					<a href="livro-suzane.html" class="single-book__img">
+						<img src="./images/books-4.jpg" alt="Suzane Von Richthofen">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="Ver mais">
+						</div>
+					</a>
+					<h4 class="single-book__title">Suzane Von Richthofen</h4>
+					<span class="single-book__price">Quando o amor chega tarde demais</span>
+				</div>
+			</div>
+			<div class="books-brand-button">
+				<a href="#livros" class="brand-button">Ver todos os livros</a>
+			</div>
+		</div>
+	</section>
+	<!-- Books end -->
+
+	<!-- Livros adicionais (linha 2) -->
+	<section class="fh5co-books">
+		<div class="site-container">
+			<h2 class="universal-h2 universal-h2-bckg">Mais Obras</h2>
+			<div class="books">
+				<div class="single-book">
+					<a href="livro-elize.html" class="single-book__img">
+						<img src="./images/books-5.jpg" alt="Elize Matsunaga">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="Ver mais">
+						</div>
+					</a>
+					<h4 class="single-book__title">Elize Matsunaga</h4>
+					<span class="single-book__price">A herdeira da tragédia</span>
+				</div>
+				<div class="single-book">
+					<a href="livro-flordelis.html" class="single-book__img">
+						<img src="./images/books-6.jpg" alt="Flordelis">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="Ver mais">
+						</div>
+					</a>
+					<h4 class="single-book__title">Flordelis</h4>
+					<span class="single-book__price">A mensageira de Deus</span>
+				</div>
+				<div class="single-book">
+					<a href="#" class="single-book__img">
+						<img src="./images/books-7.jpg" alt="Helena">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="Em breve">
+						</div>
+					</a>
+					<h4 class="single-book__title">Helena</h4>
+					<span class="single-book__price">Em breve</span>
+				</div>
+				<div class="single-book">
+					<a href="#" class="single-book__img">
+						<img src="./images/books-8.jpg" alt="A Alquimista">
+						<div class="single-book_download">
+							<img src="./images/download.svg" alt="Em breve">
+						</div>
+					</a>
+					<h4 class="single-book__title">A Alquimista</h4>
+					<span class="single-book__price">Em breve</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Livros adicionais end -->
+
+	<!-- Counter -->
+	<div class="fh5co-counter counters">
+		<div class="counter-inner site-container">
+			<div class="single-count">
+				<span class="count" data-count="6">0</span>
+				<div class="single-count__text">
+					<img src="./images/counter-1.png" alt="livros">
+					<p>Livros Publicados</p>
+				</div>
+			</div>
+			<div class="single-count">
+				<span class="count" data-count="1">0</span>
+				<div class="single-count__text">
+					<img src="./images/counter-2.png" alt="obra prima">
+					<p>Obra Prima (Nega & Enzo)</p>
+				</div>
+			</div>
+			<div class="single-count">
+				<span class="count" data-count="5">0</span>
+				<div class="single-count__text">
+					<img src="./images/counter-3.png" alt="dramas humanos">
+					<p>Dramas Humanos Investigados</p>
+				</div>
+			</div>
+			<div class="single-count">
+				<span class="count" data-count="1">0</span>
+				<div class="single-count__text">
+					<img src="./images/counter-4.png" alt="gênero único">
+					<p>Último Romântico</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Counter -->
+
+	<!-- Blog -->
+	<section class="fh5co-blog" id="blog">
+		<div class="site-container">
+			<h2 class="universal-h2 universal-h2-bckg">Blog</h2>
+			<div class="blog-slider blog-inner">
+				<div class="single-blog">
+					<div class="single-blog__img">
+						<img src="./images/blog1.jpg" alt="blog post">
+					</div>
+					<div class="single-blog__text">
+						<h4>A poesia dramática e suas origens</h4>
+						<span>Em breve</span>
+						<p>Reflexões sobre o poder do verso rimado e da metrificação na literatura contemporânea.</p>
+					</div>
+				</div>
+				<div class="single-blog">
+					<div class="single-blog__img">
+						<img src="./images/blog2.jpg" alt="blog post">
+					</div>
+					<div class="single-blog__text">
+						<h4>Por que escrevo sobre crimes reais?</h4>
+						<span>Em breve</span>
+						<p>Uma análise sobre a mente humana por trás das tragédias que chocaram o Brasil.</p>
+					</div>
+				</div>
+				<div class="single-blog">
+					<div class="single-blog__img">
+						<img src="./images/blog2.jpg" alt="blog post">
+					</div>
+					<div class="single-blog__text">
+						<h4>O processo criativo de Nega & Enzo</h4>
+						<span>Em breve</span>
+						<p>Como nasceu a obra em versos octossílabos que se tornou minha mais visceral criação.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Blog end -->
+
+	<!-- Quotes -->
+	<section class="fh5co-quotes">
+		<div class="site-container">
+			<div class="about-me-slider">
+				<div>
+					<h2 class="universal-h2 universal-h2-bckg">O que dizem sobre a obra do autor</h2>
+					<p>"Nezimar não apenas conta uma história — ele a canta. Em versos rimados e metrificados, nos entrega a obra de um verdadeiro 'último romântico'."</p>
+					<img src="./images/quotes.svg" alt="aspas">
+					<h4>Crítica Literária</h4>
+					<p>Revista Letras & Versos</p>
+				</div>
+				<div>
+					<h2 class="universal-h2 universal-h2-bckg">Reconhecimento</h2>
+					<p>"Uma voz única na poesia dramática brasileira. Nezimar H. Borges traz à tona a alma humana em sua forma mais crua e bela."</p>
+					<img src="./images/quotes.svg" alt="aspas">
+					<h4>Júri Popular</h4>
+					<p>Prêmio Literatura em Verso</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Quotes end -->
+
+	<!-- Social -->
+	<section class="fh5co-social">
+		<div class="site-container">
+			<div class="social">
+				<h5>Siga-me nas redes sociais!</h5>
+				<div class="social-icons">
+					<a href="https://instagram.com/nezimarhborges" target="_blank"><img src="./images/social-instagran.png" alt="Instagram"></a>
+					<a href="https://tiktok.com/@nezimarborges" target="_blank"><img src="./images/social-tiktok.png" alt="TikTok"></a>
+					<a href="https://www.facebook.com/nezimarhborges" target="_blank"><img src="./images/social-facebook.png" alt="Facebook"></a>
+				</div>
+				<h5>Compartilhe!</h5>
+			</div>
+		</div>
+	</section>
+	<!-- Social -->
+
+	<!-- Footer -->
+	<footer class="site-footer" id="contato">
+		<div class="site-container">
+			<div class="footer-inner">
+				<div class="footer-info">
+					<div class="footer-info__left">
+						<img src="./images/footer-img.jpg" alt="Nezimar H. Borges">
+						<p>Conheça mais sobre o escritor</p>
+					</div>
+					<div class="footer-info__right">
+						<h5>Contato</h5>
+						<p>Email: <a href="mailto:contato@nezimarhborges.com" style="color: #fff; text-decoration: none;">contato@nezimarhborges.com</a></p>
+						<div class="social-icons">
+							<a href="https://instagram.com/nezimarhborges" target="_blank"><img src="./images/social-instagran.png" alt="Instagram"></a>
+							<a href="https://tiktok.com/@nezimarborges" target="_blank"><img src="./images/social-tiktok.png" alt="TikTok"></a>
+							<a href="https://www.facebook.com/nezimarhborges" target="_blank"><img src="./images/social-facebook.png" alt="Facebook"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-contact-form">
+					<h5>Formulário de Contato</h5>
+					
+					<!-- modify this form HTML and place wherever you want your form -->
+<!-- Formulário de Contato com Formspree -->
+<form class="contact-form" action="https://formspree.io/f/xzdqlvyj" method="POST">
+    <div class="contact-form__input">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+    </div>
+    <textarea name="message" placeholder="Sua mensagem..." required></textarea>
+    <input type="submit" name="submit" value="Enviar" class="submit-button">
+</form>
+					<!-- ATENÇÃO: Substitua "seu-endpoint-aqui" pelo seu endpoint do Formspree -->
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="site-container footer-bottom-inner">
+				<p>© 2026 Nezimar H. Borges | Design por <a href="https://freehtml5.co/" target="_blank">freehtml5.co</a> | Todos os direitos reservados.</p>
+				<div class="footer-bottom__img">
+					<img src="./images/footer-mastercard.png" alt="pagamento">
+					<img src="./images/footer-paypal.png" alt="pagamento">
+					<img src="./images/footer-visa.png" alt="pagamento">
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer end -->
+
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

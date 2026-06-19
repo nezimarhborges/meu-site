@@ -1,0 +1,247 @@
+<!doctype html>
+<!--
+	Adapted for Nezimar H. Borges - Poesia Dramática
+	Original design by FreeHTML5.co
+	License: Creative Commons Attribution 3.0 Unported
+-->
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Biografia do escritor Nezimar H. Borges - Poesia Dramática">
+	<meta name="author" content="Nezimar H. Borges">
+	
+	<link rel="icon" type="image/png" href="./images/favicon-pomba-branca.png">
+	<link rel="apple-touch-icon" href="./images/favicon-pomba-branca.png">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
+	
+	<style>
+		.bio-page {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 40px 20px 60px;
+			position: relative;
+			z-index: 1;
+		}
+		.bio-page h1 {
+			font-size: 36px;
+			color: #333;
+			margin-bottom: 10px;
+		}
+		.bio-page .subtitle {
+			color: #bf5252;
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+		.bio-page h2 {
+			font-size: 24px;
+			color: #333;
+			margin-top: 40px;
+			margin-bottom: 15px;
+			border-bottom: 3px solid #bf5252;
+			padding-bottom: 8px;
+			clear: both;
+		}
+		.bio-page p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #555;
+			margin-bottom: 15px;
+		}
+		.bio-page .highlight {
+			color: #bf5252;
+			font-weight: 600;
+		}
+		.bio-timeline {
+			list-style: none;
+			padding: 0;
+			margin: 20px 0;
+		}
+		.bio-timeline li {
+			padding: 12px 20px;
+			border-left: 4px solid #bf5252;
+			margin-bottom: 12px;
+			background: #f9f9f9;
+			border-radius: 0 6px 6px 0;
+		}
+		.bio-timeline li strong {
+			color: #bf5252;
+		}
+		.bio-image {
+			float: right;
+			margin: 0 0 20px 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+			max-width: 300px;
+			position: relative;
+			z-index: 10;
+		}
+		@media (max-width: 768px) {
+			.bio-image {
+				float: none;
+				margin: 0 0 20px 0;
+				width: 100%;
+				max-width: 100%;
+			}
+			.bio-page h1 {
+				font-size: 28px;
+			}
+		}
+	</style>
+	
+	<title>Biografia - Nezimar H. Borges</title>
+</head>
+<body>
+
+	<!-- ===== NAVBAR PROFISSIONAL ===== -->
+	<nav class="navbar-pro">
+		<div class="navbar-pro-inner">
+			<div class="logo">
+				<a href="index.html">
+					<img src="./images/site-logo.png" alt="Nezimar H. Borges">
+					<span>Nezimar H. Borges</span>
+				</a>
+			</div>
+			<ul class="nav-menu" id="navMenu">
+				<li><a href="index.html">Início</a></li>
+				<li><a href="biografia.html" class="active">Biografia</a></li>
+				<li class="dropdown">
+					<a href="#" onclick="toggleDropdown(event)">Livros ▾</a>
+					<ul class="dropdown-menu">
+						<li><a href="livro-casal-malandro.html">O Casal Malandro</a></li>
+						<li><a href="livro-renata-maria.html">Renata Maria</a></li>
+						<li><a href="livro-nega-enzo.html">Nega & Enzo</a></li>
+						<li><a href="livro-suzane.html">Suzane Von Richthofen</a></li>
+						<li><a href="livro-elize.html">Elize Matsunaga</a></li>
+						<li><a href="livro-flordelis.html">Flordelis</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="trilogia.html">Trilogia</a></li>
+				<li><a href="index.html#contato">Contato</a></li>
+			</ul>
+			<div class="hamburger" id="hamburger" onclick="toggleMenu()">
+				<span></span><span></span><span></span>
+			</div>
+		</div>
+	</nav>
+	
+	<script>
+		function toggleMenu() {
+			document.getElementById('navMenu').classList.toggle('open');
+			document.getElementById('hamburger').classList.toggle('active');
+		}
+		function toggleDropdown(e) {
+			if (window.innerWidth <= 992) {
+				e.preventDefault();
+				e.target.closest('.dropdown').classList.toggle('open');
+			}
+		}
+		document.querySelectorAll('.nav-menu a').forEach(link => {
+			link.addEventListener('click', function() {
+				if (window.innerWidth <= 992) {
+					document.getElementById('navMenu').classList.remove('open');
+					document.getElementById('hamburger').classList.remove('active');
+				}
+			});
+		});
+		window.addEventListener('resize', function() {
+			if (window.innerWidth > 992) {
+				document.querySelectorAll('.dropdown.open').forEach(el => el.classList.remove('open'));
+			}
+		});
+	</script>
+
+	<!-- Conteúdo da Biografia -->
+	<section class="bio-page">
+		<h1>Nezimar H. Borges</h1>
+		<p class="subtitle">Poeta Dramático · Escritor · Último Romântico</p>
+		
+		<img src="./images/about-me.jpg" alt="Nezimar H. Borges" class="bio-image">
+		
+		<h2>Quem sou eu</h2>
+		<p>Há escritores que observam o mundo pela janela. <span class="highlight">Nezimar Hefesto Diniz Borges</span> prefere descer à rua, sujar os sapatos e sentar no banco da praça ao lado de um mendigo chamado "Sicário". Foi assim, em Novo Hamburgo, que ouviu a história que inspiraria um de seus livros, <strong>Nega & Enzo</strong>.</p>
+		
+		<p>Amapaense radicado no Rio de Janeiro, Nezimar é um <span class="highlight">colecionador de dramas humanos</span>. Escreveu sobre o poder do dinheiro, o poder do sexo, o poder da religião. Investigou a mente de assassinas reais como Suzane von Richthofen e Elize Matsunaga. Buscou as leis espirituais da riqueza e a alma alquímica feminina em <strong>Helena</strong> e <strong>A alquimista</strong>.</p>
+		
+		<p>Mas em <strong>Nega & Enzo</strong>, ele faz algo diferente: não apenas conta uma história — ele a canta. Em versos rimados e metrificados em octossílabos, o autor se permite ser, ele mesmo, um "último romântico". E nos entrega sua obra mais visceral.</p>
+		
+		<h2>Minha Jornada</h2>
+		<ul class="bio-timeline">
+			<li><strong>Nascimento:</strong> Amapá, Brasil</li>
+			<li><strong>Formação:</strong> Física e Literatura</li>
+			<li><strong>Primeiro livro:</strong> [O Casal Financeiro/2022 (não publicado, ainda)]</li>
+			<li><strong>Estilo literário:</strong> Poesia Dramática, Romance de Crime, Drama Psicológico</li>
+			<li><strong>Prêmios e reconhecimentos:</strong> ["x"]</li>
+		</ul>
+		
+		<h2>Filosofia de escrita</h2>
+		<p><span class="highlight">"Não escrevo para agradar. Escrevo porque o amor e o ódio precisam de testemunhas."</span></p>
+		<p>Cada verso, cada história carrega um pedaço da alma humana — suas luzes e suas sombras. Acredito que a literatura tem o poder de transformar, de curar e de revelar o que há de mais profundo em nós.</p>
+		<p>Seja nas páginas de um romance, seja nos versos de um poema dramático, meu compromisso é com a verdade da emoção. Sem filtros. Sem máscaras.</p>
+		
+		<h2>Obras Publicadas</h2>
+		<ul>
+			<li><strong>O Casal Malandro</strong> - O poder do sexo</li>
+			<li><strong>Renata Maria</strong> - Feminicídio em carne e osso</li>
+			<li><strong>Nega & Enzo</strong> - O amor proibido (obra em versos)</li>
+			<li><strong>Suzane Von Richthofen</strong> - Quando o amor chega tarde demais</li>
+			<li><strong>Elize Matsunaga</strong> - A herdeira da tragédia</li>
+			<li><strong>Flordelis</strong> - A mensageira de Deus</li>
+		</ul>
+		<p style="margin-top: 10px;"><strong>Em breve:</strong> Helena, A Alquimista</p>
+	</section>
+
+	<!-- Footer -->
+	<footer class="site-footer" id="contato" style="margin-top:40px;">
+		<div class="site-container">
+			<div class="footer-inner">
+				<div class="footer-info">
+					<div class="footer-info__left">
+						<img src="./images/footer-img.jpg" alt="Nezimar H. Borges">
+						<p>Conheça mais sobre o escritor</p>
+					</div>
+					<div class="footer-info__right">
+						<h5>Contato</h5>
+						<p>Email: <a href="mailto:contato@nezimarhborges.com" style="color: #fff; text-decoration: none;">contato@nezimarhborges.com</a></p>
+						<div class="social-icons">
+							<a href="https://instagram.com/nezimarhborges" target="_blank"><img src="./images/social-instagran.png" alt="Instagram"></a>
+							<a href="https://tiktok.com/@nezimarborges" target="_blank"><img src="./images/social-tiktok.png" alt="TikTok"></a>
+							<a href="https://www.facebook.com/nezimarhborges" target="_blank"><img src="./images/social-facebook.png" alt="Facebook"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-contact-form">
+					<h5>Formulário de Contato</h5>
+					<!-- Formulário de Contato com Formspree -->
+<form class="contact-form" action="https://formspree.io/f/xzdqlvyj" method="POST">
+    <div class="contact-form__input">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+    </div>
+    <textarea name="message" placeholder="Sua mensagem..." required></textarea>
+    <input type="submit" name="submit" value="Enviar" class="submit-button">
+</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="site-container footer-bottom-inner">
+				<p>© 2026 Nezimar H. Borges | Design por <a href="https://freehtml5.co/" target="_blank">freehtml5.co</a> | Todos os direitos reservados.</p>
+				<div class="footer-bottom__img">
+					<img src="./images/footer-mastercard.png" alt="pagamento">
+					<img src="./images/footer-paypal.png" alt="pagamento">
+					<img src="./images/footer-visa.png" alt="pagamento">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

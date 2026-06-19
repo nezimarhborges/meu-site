@@ -1,0 +1,665 @@
+<!doctype html>
+<!--
+	Adapted for Nezimar H. Borges - Poesia Dramática
+	Original design by FreeHTML5.co
+	License: Creative Commons Attribution 3.0 Unported
+-->
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Trilogia Feminino Divino - Suzane, Elize e Flordelis - Nezimar H. Borges">
+	<meta name="author" content="Nezimar H. Borges">
+	
+	<link rel="icon" type="image/png" href="./images/favicon-pomba-branca.png">
+	<link rel="apple-touch-icon" href="./images/favicon-pomba-branca.png">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slick.css">
+	
+	<style>
+		/* ===== PÁGINA TRILOGIA ===== */
+		.trilogia-page {
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 40px 20px 60px;
+		}
+		
+		.trilogia-page .page-header {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		
+		.trilogia-page .page-header h1 {
+			font-size: 38px;
+			color: #333;
+			margin-bottom: 5px;
+		}
+		
+		.trilogia-page .page-header .subtitle {
+			color: #bf5252;
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		
+		.trilogia-page .page-header .tagline {
+			color: #666;
+			font-size: 18px;
+			font-style: italic;
+		}
+		
+		.trilogia-page .page-header p {
+			color: #555;
+			max-width: 700px;
+			margin: 15px auto 0;
+			font-size: 16px;
+			line-height: 1.8;
+		}
+		
+		/* Banner da trilogia */
+		.trilogia-banner {
+			width: 100%;
+			max-height: 400px;
+			object-fit: cover;
+			border-radius: 12px;
+			box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+			margin-bottom: 40px;
+		}
+		
+		/* Grid dos livros */
+		.trilogia-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px;
+			margin-top: 30px;
+			margin-bottom: 50px;
+		}
+		
+		.trilogia-card {
+			background: #fff;
+			border-radius: 12px;
+			overflow: hidden;
+			box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+			transition: all 0.3s ease;
+		}
+		
+		.trilogia-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+		}
+		
+		.trilogia-card .card-cover {
+			width: 100%;
+			height: 280px;
+			object-fit: cover;
+		}
+		
+		.trilogia-card .card-content {
+			padding: 20px;
+		}
+		
+		.trilogia-card .card-content .numero {
+			color: #bf5252;
+			font-size: 13px;
+			font-weight: 700;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+		
+		.trilogia-card .card-content h3 {
+			font-size: 20px;
+			color: #333;
+			margin: 6px 0 4px;
+		}
+		
+		.trilogia-card .card-content .sub {
+			color: #bf5252;
+			font-size: 14px;
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		
+		.trilogia-card .card-content p {
+			color: #666;
+			font-size: 14px;
+			line-height: 1.6;
+			margin-bottom: 15px;
+		}
+		
+		.trilogia-card .card-content .btn-ler {
+			display: inline-block;
+			background: #bf5252;
+			color: #fff;
+			padding: 8px 20px;
+			border-radius: 4px;
+			text-decoration: none;
+			font-size: 14px;
+			font-weight: 600;
+			transition: all 0.3s;
+		}
+		
+		.trilogia-card .card-content .btn-ler:hover {
+			background: #d43f3f;
+		}
+		
+		/* Seções de texto */
+		.trilogia-section {
+			margin-bottom: 50px;
+		}
+		
+		.trilogia-section h2 {
+			font-size: 28px;
+			color: #333;
+			border-bottom: 3px solid #bf5252;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+		}
+		
+		.trilogia-section h3 {
+			font-size: 22px;
+			color: #bf5252;
+			margin-top: 30px;
+			margin-bottom: 15px;
+		}
+		
+		.trilogia-section p {
+			font-size: 16px;
+			line-height: 1.8;
+			color: #555;
+			margin-bottom: 15px;
+		}
+		
+		.trilogia-section .destaque {
+			color: #bf5252;
+			font-weight: 600;
+		}
+		
+		.trilogia-section blockquote {
+			border-left: 4px solid #bf5252;
+			padding: 15px 25px;
+			margin: 20px 0;
+			background: #f9f9f9;
+			border-radius: 0 6px 6px 0;
+			font-style: italic;
+			color: #333;
+		}
+		
+		.trilogia-section blockquote .autor {
+			display: block;
+			margin-top: 8px;
+			font-style: normal;
+			color: #bf5252;
+			font-weight: 600;
+		}
+		
+		/* Lista de ordem de leitura */
+		.ordem-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 25px;
+			margin: 20px 0;
+		}
+		
+		.ordem-card {
+			background: #f9f9f9;
+			padding: 20px;
+			border-radius: 8px;
+			border-left: 4px solid #bf5252;
+		}
+		
+		.ordem-card h4 {
+			color: #333;
+			margin-bottom: 10px;
+		}
+		
+		.ordem-card ol {
+			padding-left: 20px;
+			color: #555;
+			line-height: 1.8;
+		}
+		
+		.ordem-card ol li strong {
+			color: #bf5252;
+		}
+		
+		.ordem-card p {
+			font-size: 14px;
+			color: #666;
+			margin-top: 10px;
+		}
+		
+		/* Frases de impacto */
+		.frases-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 15px;
+			margin: 20px 0;
+		}
+		
+		.frases-grid .frase-card {
+			background: #f9f9f9;
+			padding: 15px 20px;
+			border-radius: 8px;
+			text-align: center;
+			font-weight: 600;
+			color: #333;
+			font-size: 15px;
+			border-bottom: 3px solid #bf5252;
+		}
+		
+		/* Sonetos */
+		.soneto-box {
+			background: #f9f9f9;
+			padding: 25px 30px;
+			border-radius: 8px;
+			margin: 20px 0;
+			font-style: italic;
+			line-height: 2;
+			color: #333;
+			border-left: 4px solid #bf5252;
+		}
+		
+		.soneto-box .autor-soneto {
+			display: block;
+			margin-top: 10px;
+			font-style: normal;
+			color: #bf5252;
+			font-weight: 600;
+		}
+		
+		/* Nota do autor */
+		.nota-autor {
+			background: #f0f0f0;
+			padding: 25px 30px;
+			border-radius: 8px;
+			margin: 20px 0;
+			border-left: 4px solid #bf5252;
+		}
+		
+		.nota-autor h4 {
+			color: #bf5252;
+			margin-bottom: 10px;
+		}
+		
+		.nota-autor p {
+			font-size: 15px;
+			line-height: 1.8;
+			color: #555;
+		}
+		
+		/* Responsivo */
+		@media (max-width: 992px) {
+			.trilogia-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.trilogia-grid {
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+			
+			.trilogia-page .page-header h1 {
+				font-size: 28px;
+			}
+			
+			.trilogia-card .card-cover {
+				height: 200px;
+			}
+			
+			.ordem-grid {
+				grid-template-columns: 1fr;
+			}
+			
+			.frases-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			.trilogia-card .card-cover {
+				height: 160px;
+			}
+		}
+	</style>
+	
+	<title>Trilogia Feminino Divino - Nezimar H. Borges</title>
+</head>
+<body>
+
+	<!-- ===== NAVBAR PROFISSIONAL ===== -->
+	<nav class="navbar-pro">
+		<div class="navbar-pro-inner">
+			<div class="logo">
+				<a href="index.html">
+					<img src="./images/site-logo.png" alt="Nezimar H. Borges">
+					<span>Nezimar H. Borges</span>
+				</a>
+			</div>
+			<ul class="nav-menu" id="navMenu">
+				<li><a href="index.html">Início</a></li>
+				<li><a href="biografia.html">Biografia</a></li>
+				<li class="dropdown">
+					<a href="#" onclick="toggleDropdown(event)">Livros ▾</a>
+					<ul class="dropdown-menu">
+						<li><a href="livro-casal-malandro.html">O Casal Malandro</a></li>
+						<li><a href="livro-renata-maria.html">Renata Maria</a></li>
+						<li><a href="livro-nega-enzo.html">Nega & Enzo</a></li>
+						<li><a href="livro-suzane.html">Suzane Von Richthofen</a></li>
+						<li><a href="livro-elize.html">Elize Matsunaga</a></li>
+						<li><a href="livro-flordelis.html">Flordelis</a></li>
+					</ul>
+				</li>
+				<li><a href="trilogia.html" class="active">Trilogia</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="index.html#contato">Contato</a></li>
+			</ul>
+			<div class="hamburger" id="hamburger" onclick="toggleMenu()">
+				<span></span><span></span><span></span>
+			</div>
+		</div>
+	</nav>
+	
+	<script>
+		function toggleMenu() {
+			document.getElementById('navMenu').classList.toggle('open');
+			document.getElementById('hamburger').classList.toggle('active');
+		}
+		function toggleDropdown(e) {
+			if (window.innerWidth <= 992) {
+				e.preventDefault();
+				e.target.closest('.dropdown').classList.toggle('open');
+			}
+		}
+		document.querySelectorAll('.nav-menu a').forEach(link => {
+			link.addEventListener('click', function() {
+				if (window.innerWidth <= 992) {
+					document.getElementById('navMenu').classList.remove('open');
+					document.getElementById('hamburger').classList.remove('active');
+				}
+			});
+		});
+		window.addEventListener('resize', function() {
+			if (window.innerWidth > 992) {
+				document.querySelectorAll('.dropdown.open').forEach(el => el.classList.remove('open'));
+			}
+		});
+	</script>
+
+	<!-- ===== CONTEÚDO DA TRILOGIA ===== -->
+	<section class="trilogia-page">
+		
+		<!-- Cabeçalho -->
+		<div class="page-header">
+			<h1>Feminino Divino</h1>
+			<p class="subtitle">Três tragédias brasileiras em versos</p>
+			<p class="tagline">Suzane · Elize · Flordelis</p>
+			<p>Três mulheres. Três crimes. Uma pergunta: o que faz uma alma fraturar até matar?</p>
+		</div>
+		
+		<!-- Banner -->
+		<img src="./images/trilogia-banner.jpg" alt="Trilogia Feminino Divino - Suzane, Elize e Flordelis" class="trilogia-banner">
+		
+		<!-- ===== CARDS DOS LIVROS ===== -->
+		<div class="trilogia-grid">
+			
+			<!-- Livro 1: Suzane -->
+			<div class="trilogia-card">
+				<img src="./images/books-4.jpg" alt="Suzane Von Richthofen" class="card-cover">
+				<div class="card-content">
+					<span class="numero">Livro 1</span>
+					<h3>Suzane Von Richthofen</h3>
+					<div class="sub">Quando o amor chega tarde demais</div>
+					<p>A filha que matou os pais. Sete lutos antes dos seis anos. Um amor que chegou tarde demais. E uma pergunta: até onde vai a fome de amar?</p>
+					<a href="livro-suzane.html" class="btn-ler">Conhecer →</a>
+				</div>
+			</div>
+			
+			<!-- Livro 2: Elize -->
+			<div class="trilogia-card">
+				<img src="./images/books-5.jpg" alt="Elize Matsunaga" class="card-cover">
+				<div class="card-content">
+					<span class="numero">Livro 2</span>
+					<h3>Elize Matsunaga</h3>
+					<div class="sub">A herdeira da tragédia</div>
+					<p>Abusada na infância. Expulsa de casa. Prostituta de luxo. Um tiro. Um esquartejamento. E a pergunta que não quer calar: o monstro nasce ou é feito?</p>
+					<a href="livro-elize.html" class="btn-ler">Conhecer →</a>
+				</div>
+			</div>
+			
+			<!-- Livro 3: Flordelis -->
+			<div class="trilogia-card">
+				<img src="./images/books-6.jpg" alt="Flordelis" class="card-cover">
+				<div class="card-content">
+					<span class="numero">Livro 3</span>
+					<h3>Flordelis</h3>
+					<div class="sub">A mensageira de Deus</div>
+					<p>Pastora. Deputada. Mãe de 50 filhos. Mandante de assassinato. Condenada a 50 anos. Mas e se a redenção for possível mesmo para quem fez o imperdoável?</p>
+					<a href="livro-flordelis.html" class="btn-ler">Conhecer →</a>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!-- ===== APRESENTAÇÃO DA TRILOGIA ===== -->
+		<div class="trilogia-section">
+			<h2>Sobre a Trilogia</h2>
+			<p><span class="destaque">Hefesto Diniz</span> conclui uma das obras mais corajosas da literatura brasileira contemporânea: uma trilogia de tragédias poéticas inspiradas em casos reais que chocaram o país. Não são documentários. Não são true crimes sensacionalistas. São perguntas – encenadas, versejadas, filosofadas.</p>
+			
+			<blockquote>
+				"Três mulheres. Três crimes. Uma pergunta: o que faz uma alma fraturar até matar?"
+			</blockquote>
+			
+			<p>Juntas, as três obras formam um tríptico sobre:</p>
+			<ul style="color:#555;line-height:2;font-size:16px;padding-left:20px;">
+				<li>A <span class="destaque">infância roubada</span> como origem da violência adulta</li>
+				<li>O <span class="destaque">patriarcado</span> como tecido social que fabrica vítimas e, depois, monstros</li>
+				<li>A impossibilidade da <span class="destaque">justiça</span> responder sozinha à pergunta <em>por quê?</em></li>
+				<li>A <span class="destaque">literatura</span> como lugar onde o imperdoável pode, ao menos, ser compreendido</li>
+			</ul>
+			
+			<blockquote>
+				"Não escrevi para provar um ponto. Escrevi para abrir portas."
+				<span class="autor">— Hefesto Diniz</span>
+			</blockquote>
+		</div>
+		
+		<!-- ===== ORDEM DE LEITURA ===== -->
+		<div class="trilogia-section">
+			<h2>Ordem de Leitura</h2>
+			
+			<div class="ordem-grid">
+				<div class="ordem-card">
+					<h4>📅 Cronológica</h4>
+					<ol>
+						<li><strong>Suzane</strong> (2002) — Parricídio</li>
+						<li><strong>Elize</strong> (2012) — Homicídio + esquartejamento</li>
+						<li><strong>Flordelis</strong> (2019) — Mandante de homicídio</li>
+					</ol>
+					<p>Acompanha a linha do tempo real da criminalística brasileira.</p>
+				</div>
+				
+				<div class="ordem-card">
+					<h4>🎭 Temática (sugerida)</h4>
+					<ol>
+						<li><strong>Elize</strong> — Trauma infantil + casamento</li>
+						<li><strong>Suzane</strong> — Substituição afetiva + juventude</li>
+						<li><strong>Flordelis</strong> — Religião + poder + redenção</li>
+					</ol>
+					<p>Privilegia o arco dramático: choque → compreensão → transcendência.</p>
+				</div>
+				
+				<div class="ordem-card">
+					<h4>📚 Complexidade crescente</h4>
+					<ol>
+						<li><strong>Suzane</strong> — Drama familiar clássico</li>
+						<li><strong>Elize</strong> — Crítica social + prostituição + Caravaggio</li>
+						<li><strong>Flordelis</strong> — Camada espiritual + gnóstica + junguiana</li>
+					</ol>
+					<p>Maior densidade filosófica a cada volume.</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- ===== DIFERENCIAIS ===== -->
+		<div class="trilogia-section">
+			<h2>Diferenciais da Trilogia</h2>
+			<ul style="color:#555;line-height:2;font-size:16px;padding-left:20px;">
+				<li><span class="destaque">Gênero único no Brasil:</span> não é true crime, não é romance, não é teatro — é uma fusão dos três</li>
+				<li><span class="destaque">Protagonistas femininas complexas:</span> nenhuma é santa ou demônio</li>
+				<li><span class="destaque">Estrutura em comum:</span> coro de crianças, epílogo em soneto, abertura musical, dramatis personae</li>
+				<li><span class="destaque">Potencial acadêmico:</span> Psicologia (trauma), Direito (criminologia), Letras, Teologia, Artes Cênicas</li>
+				<li><span class="destaque">Trilha musical integrada:</span> cada volume tem canções que dialogam com o espírito da obra</li>
+			</ul>
+		</div>
+		
+		<!-- ===== FRASES DE IMPACTO ===== -->
+		<div class="trilogia-section">
+			<h2>Frases de Impacto</h2>
+			<div class="frases-grid">
+				<div class="frase-card">"O monstro já foi vítima."</div>
+				<div class="frase-card">"Não escrevi para provar um ponto. Escrevi para abrir portas."</div>
+				<div class="frase-card">"A pior prisão não é a de Bangu. É a da mente que não se conhece."</div>
+				<div class="frase-card">"Três mulheres. Três crimes. Uma pergunta."</div>
+				<div class="frase-card">"Não é true crime. É tragédia. É poesia. É pergunta."</div>
+				<div class="frase-card">"Pastora do diabo? Mensageira de Deus? A literatura pode perguntar o que o tribunal não pergunta."</div>
+			</div>
+		</div>
+		
+		<!-- ===== SONETOS ===== -->
+		<div class="trilogia-section">
+			<h2>Sonetos da Trilogia</h2>
+			
+			<div class="soneto-box">
+				<h4 style="color:#bf5252;font-style:normal;">Suzane</h4>
+				Surpreso estupefato horripilante<br>
+				Oresteia está longe não se engane<br>
+				Só este quem vos fala talvez Dante<br>
+				Curvaria ao primor da obra Suzane<br><br>
+				Clitemnestra teria sério obstante<br>
+				Modus operandi em fraca madame<br>
+				Diante ela defender amor pulsante<br>
+				Primeira vez em algo que se ame<br><br>
+				Matar a própria mãe para vingar<br>
+				O pai é triste destino de Orestes<br>
+				Até onde maldade é grande mar<br><br>
+				Eumênides primeiro em tantos testes<br>
+				Inova a justiça no ato a julgar<br>
+				Suzane a se redimir está prestes.
+				<span class="autor-soneto">— Ésquilo</span>
+			</div>
+			
+			<div class="soneto-box">
+				<h4 style="color:#bf5252;font-style:normal;">Elize</h4>
+				Não me envergonho da assassina feia<br>
+				Para mim parece nada distante<br>
+				Uma vez matar cria fez Medéia<br>
+				Mas próxima trágica de As Bacantes<br><br>
+				Por seu lugar na história se anseia<br>
+				Trauma lhe faz imponente brilhante<br>
+				O banquete farto em divina ceia<br>
+				Esquarteja e come Rei que fora antes<br><br>
+				Com medo se foge ou enfrenta fúria<br>
+				As forças da natureza infelizes<br>
+				E são outrora as raízes da cura<br><br>
+				Os versos a põe novas diretrizes<br>
+				Desafia senso comum até cúria<br>
+				Para redenção de muitas Elizes.
+				<span class="autor-soneto">— Eurípedes</span>
+			</div>
+			
+			<div class="soneto-box">
+				<h4 style="color:#bf5252;font-style:normal;">Flordelis</h4>
+				Versos divinos em criação vasta<br>
+				Cravaria tal o qual Édipo-Rei<br>
+				A fusão carnal filho-mãe Jocasta<br>
+				Amor pelo incesto contar irei<br><br>
+				O fim patriarcal pela iconoclasta<br>
+				Carrega pois trauma qual mostrarei<br>
+				Uma vez não lhe tornaria casta<br>
+				Faz se iguais as outras damas okey<br><br>
+				O destino há tanto irremediável<br>
+				Final se sabe deste antiga Atlante<br>
+				Todo Avatar é feito herói da Marvel<br><br>
+				A dramaturgia ocidental de antes<br>
+				Ressurge com Flordelis tão amável<br>
+				Do abismo até heroína brilhante.
+				<span class="autor-soneto">— Sófocles</span>
+			</div>
+		</div>
+		
+		<!-- ===== NOTA DO AUTOR ===== -->
+		<div class="nota-autor">
+			<h4>Nota do Autor</h4>
+			<p>No caso real, Suzane von Richthofen foi condenada a 39 anos de prisão; Elize Matsunaga, a 22 anos; Flordelis dos Santos Souza, a 50 anos. A imprensa as chamou de "monstros". A opinião pública as condenou antes do júri.</p>
+			<p>Estas tragédias não contestam os vereditos. Apenas perguntam: <span class="destaque">o que acontece na alma de quem mata?</span></p>
+			<p>A absolvição ficcional de Suzane, a misericórdia artística concedida a Elize, e a redenção espiritual de Flordelis não são atos jurídicos. São atos de <span class="destaque">misericórdia artística</span> — a pergunta que a justiça não pode responder, a literatura pode ao menos formular.</p>
+			<p>O leitor que busca um documentário encontrará outra coisa. O leitor que busca compreender — não concordar, mas compreender — talvez encontre o que procura.</p>
+		</div>
+		
+		<!-- ===== QUARTA CAPA DA CAIXA ===== -->
+		<div class="trilogia-section">
+			<h2>Quarta Capa da Caixa</h2>
+			<blockquote>
+				Três mulheres. Três crimes. Uma pergunta.<br><br>
+				Suzane matou os pais. Elize matou e esquartejou o marido. Flordelis mandou matar o companheiro. A imprensa as chamou de monstro. O tribunal as condenou.<br><br>
+				Mas esta trilogia de tragédias poéticas pergunta o que a justiça não pode responder: <span class="destaque">quem matou essas mulheres antes do crime?</span><br><br>
+				Da infância roubada ao amor que mata, da prostituição à ameaça de perder um filho, do altar à prisão — e, no fim, uma descida ao inferno interior em busca de redenção.<br><br>
+				<em>Feminino Divino</em> não é true crime. É literatura. É pergunta. É espelho.
+				<span class="autor">— Hefesto Diniz</span>
+			</blockquote>
+		</div>
+		
+	</section>
+
+	<!-- Footer -->
+	<footer class="site-footer" id="contato" style="margin-top:40px;">
+		<div class="site-container">
+			<div class="footer-inner">
+				<div class="footer-info">
+					<div class="footer-info__left">
+						<img src="./images/footer-img.jpg" alt="Nezimar H. Borges">
+						<p>Conheça mais sobre mim</p>
+					</div>
+					<div class="footer-info__right">
+						<h5>Contato</h5>
+						<p>Email: <a href="mailto:contato@nezimarhborges.com" style="color: #fff; text-decoration: none;">contato@nezimarhborges.com</a></p>
+						<div class="social-icons">
+							<a href="https://instagram.com/nezimarhborges" target="_blank"><img src="./images/social-instagran.png" alt="Instagram"></a>
+							<a href="https://tiktok.com/@nezimarborges" target="_blank"><img src="./images/social-tiktok.png" alt="TikTok"></a>
+							<a href="https://www.facebook.com/nezimarhborges" target="_blank"><img src="./images/social-facebook.png" alt="Facebook"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-contact-form">
+					<h5>Formulário de Contato</h5>
+					<form class="contact-form" action="https://formspree.io/f/xzdqlvyj" method="POST">
+						<div class="contact-form__input">
+							<input type="text" name="name" placeholder="Seu nome" required>
+							<input type="email" name="email" placeholder="Seu email" required>
+						</div>
+						<textarea name="message" placeholder="Sua mensagem..." required></textarea>
+						<input type="submit" name="submit" value="Enviar" class="submit-button">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="site-container footer-bottom-inner">
+				<p>© 2026 Nezimar H. Borges | Design por <a href="https://freehtml5.co/" target="_blank">freehtml5.co</a> | Todos os direitos reservados.</p>
+				<div class="footer-bottom__img">
+					<img src="./images/footer-mastercard.png" alt="pagamento">
+					<img src="./images/footer-paypal.png" alt="pagamento">
+					<img src="./images/footer-visa.png" alt="pagamento">
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
